@@ -32,8 +32,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center; 
     
-    /* ★ここを変更します！ */
-    /* 背景画像に合わせた最大幅を設定 */
     max-width: 500px;
     
     box-sizing: border-box; 
@@ -41,15 +39,16 @@ body {
     flex-direction: column; 
     align-items: center; 
     
-    /* 最低限の高さを設定して、コンテンツが少ない場合でも形を保つ */
     min-height: 380px; 
     justify-content: space-around; 
 }
 
+/* ★ここを変更します */
 h1 {
     color: white;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: clamp(1.5em, 5vw, 2em);
 }
 
 button {
@@ -67,6 +66,7 @@ button:hover {
     background-color: rgba(41, 128, 185, 0.9);
 }
 
+/* ★ここを変更します */
 #result-text {
     font-size: 1.5em;
     font-weight: bold;
@@ -76,4 +76,5 @@ button:hover {
     white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    font-size: clamp(1em, 5vw, 1.5em);
 }
