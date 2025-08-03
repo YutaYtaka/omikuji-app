@@ -31,7 +31,11 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center; 
-    max-width: 90%; 
+    
+    /* ★ここを変更します！ */
+    /* 背景画像に合わせた最大幅を設定 */
+    max-width: 500px;
+    
     box-sizing: border-box; 
     display: flex; 
     flex-direction: column; 
@@ -70,6 +74,6 @@ button:hover {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     white-space: normal;
-    word-wrap: break-word; /* ★変更点 */
-    overflow-wrap: break-word; /* ★変更点 */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
