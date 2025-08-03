@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    width: 100%;
+    
+    /* 背景画像の設定 */
+    background-image: url('omikuji_macho_background.png'); 
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+
+    /* 背景のぼかしを最小に（2px） */
+    backdrop-filter: blur(2px); 
+    -webkit-backdrop-filter: blur(2px); 
+}
+
+/* アプリ全体のコンテナ */
+.app-container {
+    padding: 30px; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    text-align: center; 
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-around; 
+
+    /* ★ここを修正：コンテナの最大幅を画面の高さに対する割合で指定 */
+    max-width: 80vh; /* 画面の高さの80%を最大幅とする */
+    width: 90%; /* 画面が狭いときは90%の幅で縮小する */
+
+    min-height: 420px; 
+    height: auto; 
+    overflow-y: auto; 
+    padding-bottom: 20px; 
+}
+
+h1 {
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    word-wrap: break-word; 
+    max-width: 100%; 
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: rgba(52, 152, 219, 0.8); 
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(41, 128, 185, 0.9);
+}
+
+#result-text {
+    font-size: 1.5em; 
+    font-weight: bold;
+    margin-top: 30px; 
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    
+    white-space: normal; 
+    word-break: keep-all; 
+    
+    max-width: 100%; 
+    text-align: center; 
+    box-sizing: border-box; 
+    padding: 0 15px; 
+}
