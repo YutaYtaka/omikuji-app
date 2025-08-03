@@ -70,6 +70,6 @@ button:hover {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     white-space: normal;
-    word-break: keep-all;
-    overflow-wrap: break-word;
+    word-wrap: break-word; /* ★変更点 */
+    overflow-wrap: break-word; /* ★変更点 */
 }
