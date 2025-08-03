@@ -16,8 +16,8 @@ body {
     background-attachment: fixed;
 
     /* 背景全体にぼかし効果を適用 */
-    backdrop-filter: blur(8px); 
-    -webkit-backdrop-filter: blur(8px); 
+    backdrop-filter: blur(2px); 
+    -webkit-backdrop-filter: blur(2px); 
 
     /* 背景画像の上に半透明のオーバーレイを追加して、文字をより見やすくする */
     background-color: rgba(0, 0, 0, 0.4); 
@@ -78,3 +78,4 @@ button:hover {
     overflow-wrap: break-word;
     font-size: clamp(1em, 5vw, 1.5em);
 }
+
