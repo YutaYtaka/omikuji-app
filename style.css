@@ -9,45 +9,43 @@ body {
     width: 100%;
     
     /* 背景画像の設定 */
-    background-image: url('omikuji_macho_background.png'); 
-    background-size: contain; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
+    background-image: url('omikuji_macho_background.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
-    /* 背景のぼかしを最小に（2px） */
-    backdrop-filter: blur(2px); 
-    -webkit-backdrop-filter: blur(2px); 
+    /* 背景全体にぼかし効果を適用 */
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); 
+
+    /* 背景画像の上に半透明のオーバーレイを追加して、文字をより見やすくする */
+    background-color: rgba(0, 0, 0, 0.4); 
+    background-blend-mode: darken; 
 }
 
 /* アプリ全体のコンテナ */
 .app-container {
+    background-color: rgba(255, 255, 255, 0.2); 
     padding: 30px; 
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center; 
+    max-width: 90%; 
     box-sizing: border-box; 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
+    
+    /* 最低限の高さを設定して、コンテンツが少ない場合でも形を保つ */
+    min-height: 380px; 
     justify-content: space-around; 
-
-    /* ★ここを修正：コンテナの最大幅を画面の高さに対する割合で指定 */
-    max-width: 80vh; /* 画面の高さの80%を最大幅とする */
-    width: 90%; /* 画面が狭いときは90%の幅で縮小する */
-
-    min-height: 420px; 
-    height: auto; 
-    overflow-y: auto; 
-    padding-bottom: 20px; 
 }
 
 h1 {
     color: white;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    word-wrap: break-word; 
-    max-width: 100%; 
 }
 
 button {
@@ -66,17 +64,12 @@ button:hover {
 }
 
 #result-text {
-    font-size: 1.5em; 
+    font-size: 1.5em;
     font-weight: bold;
     margin-top: 30px; 
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    
-    white-space: normal; 
-    word-break: keep-all; 
-    
-    max-width: 100%; 
-    text-align: center; 
-    box-sizing: border-box; 
-    padding: 0 15px; 
+    white-space: normal;
+    word-break: break-word; 
+    -webkit-line-break: anywhere; 
 }
